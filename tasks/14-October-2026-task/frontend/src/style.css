@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #263229;
+  background: #f7f8f3;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.shell {
+  max-width: 1060px;
+  margin: auto;
+  padding: 0 30px;
+}
+.top {
+  height: 87px;
+  border-bottom: 1px solid #e0e5da;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  font-size: 19px;
+}
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #315e3c;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+.dot {
+  color: #8bb75d;
+}
+.top-right {
+  margin-left: auto;
+  font:
+    700 10px "DM Sans",
+    sans-serif;
+  letter-spacing: 1.4px;
+  color: #8f9a8e;
+}
+.hero {
+  padding: 75px 0 55px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #6f8b61;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.eyebrow-line {
+  width: 20px;
+  height: 1px;
+  background: #81a574;
+}
+.hero h1 {
+  font:
+    800 clamp(46px, 6.3vw, 74px)/1.13 Manrope,
+    sans-serif;
+  letter-spacing: -4px;
+  margin: 18px 0 19px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #749a69;
+}
+.hero p {
+  font-size: 15px;
+  color: #819081;
+  line-height: 1.7;
+}
+.panel {
+  background: white;
+  border: 1px solid #e8ece5;
+  border-radius: 13px;
+  padding: 32px 35px 0;
+  box-shadow: 0 12px 45px #38573809;
+}
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+.eyebrow.small {
+  font-size: 9px;
+  letter-spacing: 1.6px;
+}
+.panel h2 {
+  font:
+    800 27px Manrope,
+    sans-serif;
+  letter-spacing: -1px;
+  margin: 8px 0 0;
+}
+.count {
+  font:
+    700 12px "DM Sans",
+    sans-serif;
+  color: #618356;
+  background: #eaf1e5;
+  border-radius: 5px;
+  padding: 4px 8px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.progress {
+  width: 178px;
+  color: #7b8978;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-align: right;
+}
+.track {
+  height: 5px;
+  border-radius: 10px;
+  background: #e9eee7;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.track > div {
+  height: 100%;
+  background: #729d64;
+  border-radius: 10px;
+  transition: width 0.2s;
+}
+.add {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid #dce5d8;
+  border-radius: 7px;
+  padding: 6px 7px 6px 17px;
+  color: #86a479;
+  background: #fcfdfb;
+}
+.add input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+  color: #243a2a;
+}
+.add input::placeholder {
+  color: #a4ada0;
+}
+.add button {
+  border: 0;
+  border-radius: 5px;
+  background: #315d3c;
+  color: white;
+  padding: 13px 17px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.add button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.add button span {
+  margin-left: 10px;
+}
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid #e8ede7;
+  margin-top: 26px;
+}
+.filters button {
+  border: 0;
+  background: none;
+  color: #97a196;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 0 16px;
+  border-bottom: 2px solid transparent;
+}
+.filters button.selected {
+  color: #315d3c;
+  border-bottom-color: #315d3c;
+}
+.remaining {
+  margin-left: auto;
+  padding-bottom: 16px;
+  font-size: 11px;
+  color: #a4aea2;
+}
+.task-list {
+  min-height: 194px;
+}
+.task {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 66px;
+  border-bottom: 1px solid #f0f2ee;
+}
+.task:last-child {
+  border-bottom: 0;
+}
+.check {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #c6d5bf;
+  background: white;
+  border-radius: 6px;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+.done .check {
+  background: #729d64;
+  border-color: #729d64;
+}
+.task-title {
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.done .task-title {
+  text-decoration: line-through;
+  color: #a4afa1;
+}
+.done-label {
+  font-size: 9px;
+  color: #83a374;
+  font-weight: 800;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-left: auto;
+  letter-spacing: 1px;
+}
+.delete {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: #b5bfb2;
+  padding: 8px;
+}
+.done-label + .delete {
+  margin-left: 0;
+}
+.delete:hover {
+  color: #ae6159;
+}
+.empty {
+  height: 194px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #a2b19d;
+  font-size: 12px;
+}
+.empty strong {
+  font-size: 14px;
+  color: #657962;
+}
+.error {
+  font-size: 12px;
+  color: #ae5147;
+  margin-top: 14px;
+}
+.panel-foot {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #edf0eb;
+  color: #a0aca0;
+  font-size: 9px;
+  letter-spacing: 1.1px;
+  font-weight: 800;
+  padding: 20px 0;
+}
+.status-dot {
+  display: inline-block;
+  background: #83a76f;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 0 38px;
+  color: #a2ada0;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+@media (max-width: 600px) {
+  .shell {
+    padding: 0 17px;
+  }
+  .top {
+    height: 70px;
+  }
+  .top-right {
+    display: none;
+  }
+  .hero {
+    padding: 55px 0 40px;
+  }
+  .hero h1 {
+    letter-spacing: -2.5px;
+  }
+  .panel {
+    padding: 23px 17px 0;
+  }
+  .panel-head {
+    align-items: start;
+  }
+  .progress {
+    width: 105px;
+  }
+  .filters {
+    gap: 14px;
+  }
+  .filters button {
+    font-size: 11px;
+  }
+  .remaining {
+    font-size: 9px;
+  }
+  .add button {
+    padding: 13px 9px;
+  }
+  .add button span {
+    display: none;
+  }
+  .panel-foot {
+    font-size: 8px;
+    gap: 12px;
+  }
+}

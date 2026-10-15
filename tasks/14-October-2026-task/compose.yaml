@@ -1,0 +1,30 @@
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      API_PROXY_TARGET: http://backend:3001
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      DATA_DIR: /app/data
+      CORS_ORIGIN: http://localhost:5173
+    volumes:
+      - task_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  task_data:
