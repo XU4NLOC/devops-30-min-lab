@@ -1,10 +1,14 @@
 from fastapi import FastAPI
-import pickle
- 
-app = FastAPI()
-with open("model.pkl", "rb") as f:
-   model = pickle.load(f)
- 
-@app.post("/predict/")
-def predict(data: list):
-   return {"prediction": model.predict(data)}
+
+# Create the FastAPI application instance
+app = FastAPI(title="My Dockerized API")
+
+# Define a simple root endpoint
+@app.get("/")
+def read_root():
+    return {"message": "Hello from Docker!"}
+
+# Define a health check endpoint
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
