@@ -23,4 +23,4 @@
 - In this session I learnt how to containerize a FastAPI application, how to config, build the image and run the cotainer with uvicorn command
 
 **Next action:**  
-- First CI/CD project for this lab
+- Setting up Kubernetes 
